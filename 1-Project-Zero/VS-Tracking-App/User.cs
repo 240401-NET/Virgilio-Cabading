@@ -7,13 +7,13 @@ namespace VS_Tracking_App;
 ///     Encapsulates the user's biodata</para>
 /// </summary>
 
-class User
+public class User
 {
     // *** Fields ******
 
     private string _firstName;
-    public string _lastName;
-    public int _age;
+    private string _lastName;
+    private int _age;
 
     // *** Getters and Setters ******
     public string FirstName
@@ -36,6 +36,9 @@ class User
 
     // *** Constructors ******
 
+    /// <summary>
+    /// Default Constructor
+    /// </summary>
     public User()
     {
         _firstName = "unknown";
@@ -43,6 +46,12 @@ class User
         _age = -1;
     }
 
+    /// <summary>
+    /// Parameterized Constructor
+    /// </summary>
+    /// <param name="newFirstName">The User's First Name in string format</param>
+    /// <param name="newLastName">The User's Last Name in string format</param>
+    /// <param name="newAge">The User's Age in integer format</param>
     public User( string newFirstName, string newLastName, int newAge)
     {
         _firstName = newFirstName;
@@ -52,6 +61,10 @@ class User
 
     // *** Methods ******
 
+    /// <summary>
+    /// Converts User class into a printble format
+    /// </summary>
+    /// <returns>string format of user class</returns>
     public override string ToString()
     {
         return  $".::: User :: First Name: {_firstName}" +

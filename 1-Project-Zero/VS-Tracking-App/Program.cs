@@ -8,8 +8,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("/////////////////////////////////");
-        Console.WriteLine("Vital Signs Tracking Application\n");
+        Console.Clear();
+        Console.WriteLine("//////////////////////////////////////////");
+        Console.WriteLine("Vital Signs Tracking Application");
+        Console.WriteLine("//////////////////////////////////////////\n");
 
 
         // *** TEST AREA ******

@@ -21,5 +21,14 @@ class Program
         Console.WriteLine("\nCreate second user using default constructor");
         User secondUser = new();
         Console.WriteLine(secondUser.ToString());
+
+        // Test User Class Getters
+        Console.WriteLine("\nTest User Getters and Setters, second user is now:");
+        secondUser.FirstName = "Raphael";
+        secondUser.LastName = "Turtle";
+        secondUser.Age = 17;
+        Console.WriteLine($"First name: {secondUser.FirstName}");
+        Console.WriteLine($"Last name: {secondUser.LastName}");
+        Console.WriteLine($"Age: {secondUser.Age}");
     }
 }

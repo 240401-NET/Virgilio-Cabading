@@ -3,7 +3,8 @@ using System.Collections.Specialized;
 namespace VS_Tracking_App;
 
 /// <summary>
-/// User Class: Encapsulates the user's biodata
+///     User Class: 
+///     Encapsulates the user's biodata</para>
 /// </summary>
 
 class User

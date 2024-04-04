@@ -18,7 +18,7 @@ class User
     {
         firstName = "unknown";
         lastName = "unknown";
-        age = 999;
+        age = -1;
     }
 
     public User( string newFirstName, string newLastName, int newAge)

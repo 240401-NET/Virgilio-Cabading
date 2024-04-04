@@ -27,3 +27,8 @@ Revature
 ### Nice to Have
 - n-tier architecture
 - dependency injection
+
+## Warning
+
+This application only runs on PowerShell CLI.
+Does not work on GitBash CLI.

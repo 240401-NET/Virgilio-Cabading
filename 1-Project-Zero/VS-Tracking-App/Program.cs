@@ -20,5 +20,8 @@ class Program
 
         // Test the User Class Methods
         appTester.TestUserClass();
+
+        // Test Vital Sign Class Methods
+        appTester.TestVitalSignClass();
     }
 }

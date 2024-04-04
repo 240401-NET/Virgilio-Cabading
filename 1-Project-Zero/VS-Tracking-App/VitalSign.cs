@@ -41,7 +41,7 @@ public class VitalSign
     public VitalSign()
     {
         _heartRate = -1;
-        _systolicBP = -0;
+        _systolicBP = -1;
         _diastolicBP = -1;
     }
 
@@ -66,6 +66,7 @@ public class VitalSign
     /// <returns>string format of a Vital Sign Class</returns>
     public override string ToString()
     {
-        return base.ToString();
+        return  $"Vital Sign :: BP: {_systolicBP} / {_diastolicBP} " +
+                $":: Heart rate: {_heartRate}";
     }
 }

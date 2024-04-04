@@ -25,8 +25,8 @@ class Test
         User secondUser = new();
         Console.WriteLine(secondUser.ToString());
 
-        // Test User Class Getters
-        // Change the information for the user created via default constructor
+        // Test User Class Getters and Setters
+        //      Change the information for the user created via default constructor
         Console.WriteLine("\nTest User Getters and Setters, second user is now:");
         secondUser.FirstName = "Raphael";
         secondUser.LastName = "Turtle";

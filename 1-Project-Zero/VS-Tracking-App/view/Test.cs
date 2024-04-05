@@ -36,6 +36,7 @@ class Test
         Console.WriteLine($"Age: {secondUser.Age}");
 
         Console.WriteLine("");
+        DisplayUtil.HoldTerminal();
     }
 
     public void TestVitalSignClass()
@@ -65,5 +66,6 @@ class Test
         Console.WriteLine(  $"Newly modified VS: Blood Pressure: {firstVS.SystolicBP}/{firstVS.DiastolicBP} " + 
                             $":: Heart Rate: {firstVS.HeartRate}");
         Console.WriteLine("");
+        DisplayUtil.HoldTerminal();
     }
 }

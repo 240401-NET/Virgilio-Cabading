@@ -21,13 +21,13 @@ class DisplayUtil
     /// </summary>
     public static void DisplayProgramHeader()
     {
-        Console.WriteLine("//////////////////////////////////////////");
-        Console.WriteLine("Vital Signs Tracking Application");
-        Console.WriteLine("       /\\	Vital Signs         ");
-        Console.WriteLine("      /  \\	Tracking Application");
-        Console.WriteLine("_/\\  /    \\  /\\_____________________");
-        Console.WriteLine("   \\/      \\/                       ");
-        Console.WriteLine("------------------------------------------\n");
+        Console.Clear();
+        Console.WriteLine("=============================================================");
+        Console.WriteLine("           /\\	    Vital Signs         ");
+        Console.WriteLine("          /  \\	    Tracking Application");
+        Console.WriteLine("    _/\\  /    \\  /\\_____________________");
+        Console.WriteLine("       \\/      \\/                       ");
+        Console.WriteLine("=============================================================\n");
     }
 
     /// <summary>

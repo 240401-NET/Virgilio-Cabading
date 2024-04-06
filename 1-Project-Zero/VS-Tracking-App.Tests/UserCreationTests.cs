@@ -1,25 +1,25 @@
 namespace VS_Tracking_App.Tests;
 
-public class UserCreationTests
+public class PatientCreationTests
 {
     /// <summary>
     /// Test to make sure that the default constructor returns an instance
-    /// of User with Name and Age set to: "unknown unknown" & -1
+    /// of Patient with Name and Age set to: "unknown unknown" & -1
     /// </summary>
     [Fact]
-    public void User_DefaultConstructor_ReturnsFirstNameLastNameAndAgeSetToDefaultValues()
+    public void Patient_DefaultConstructor_ReturnsFirstNameLastNameAndAgeSetToDefaultValues()
     {
         // Arrange
 
         // Act
-        User newDefaultUser = new();
+        Patient newDefaultPatient = new();
 
         // Assert
-        // Test that the create user has:
+        // Test that the create Patient has:
         // First name: unknown | Last name: unknown | Age: -1
-        Assert.Equal( "unknown", newDefaultUser.FirstName );
-        Assert.Equal( "unknown", newDefaultUser.LastName );
-        Assert.Equal(-1, newDefaultUser.Age );
+        Assert.Equal( "unknown", newDefaultPatient.FirstName );
+        Assert.Equal( "unknown", newDefaultPatient.LastName );
+        Assert.Equal(-1, newDefaultPatient.Age );
     }
 
     /// <summary>
@@ -31,7 +31,7 @@ public class UserCreationTests
     [Theory]
     [InlineData("Humpty", "Dumpty", 16)]
     [InlineData("Mother", "Goose", 56)]
-    public void User_ThreeParamConstructor_ReturnsFirstNameLastNameAndAgeSetToValuesPassedInParam( 
+    public void Patient_ThreeParamConstructor_ReturnsFirstNameLastNameAndAgeSetToValuesPassedInParam( 
         string expectedFirstName, 
         string expectedLastName, 
         int expectedAge)
@@ -39,11 +39,11 @@ public class UserCreationTests
         // Arrange
 
         // Act
-        User newUser = new(expectedFirstName, expectedLastName, expectedAge);
+        Patient newPatient = new(expectedFirstName, expectedLastName, expectedAge);
 
         // Assert
-        Assert.Equal(expectedFirstName, newUser.FirstName);
-        Assert.Equal(expectedLastName, newUser.LastName);
-        Assert.Equal(expectedAge, newUser.Age);
+        Assert.Equal(expectedFirstName, newPatient.FirstName);
+        Assert.Equal(expectedLastName, newPatient.LastName);
+        Assert.Equal(expectedAge, newPatient.Age);
     }
 }

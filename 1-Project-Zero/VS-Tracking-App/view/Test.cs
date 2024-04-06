@@ -9,32 +9,32 @@ namespace VS_Tracking_App;
 class Test
 {
     /// <summary>
-    ///     Tests the User Class methods
+    ///     Tests the Patient Class methods
     /// </summary>
-    public void TestUserClass() 
+    public void TestPatientClass() 
     {
         Console.WriteLine("---------------------");
-        Console.WriteLine("Testing User Class methods\n");
+        Console.WriteLine("Testing Patient Class methods\n");
 
         // Test Constructor
-        Console.WriteLine("Create first user using parameterized constructor");
-        User firstUser = new("Leonardo", "Turtle", 16);
-        Console.WriteLine(firstUser.ToString());
+        Console.WriteLine("Create first Patient using parameterized constructor");
+        Patient firstPatient = new("Leonardo", "Turtle", 16);
+        Console.WriteLine(firstPatient.ToString());
         
         // Test Default Constructor
-        Console.WriteLine("\nCreate second user using default constructor");
-        User secondUser = new();
-        Console.WriteLine(secondUser.ToString());
+        Console.WriteLine("\nCreate second Patient using default constructor");
+        Patient secondPatient = new();
+        Console.WriteLine(secondPatient.ToString());
 
-        // Test User Class Getters and Setters
-        //      Change the information for the user created via default constructor
-        Console.WriteLine("\nTest User Getters and Setters, second user is now:");
-        secondUser.FirstName = "Raphael";
-        secondUser.LastName = "Turtle";
-        secondUser.Age = 17;
-        Console.WriteLine($"First name: {secondUser.FirstName}");
-        Console.WriteLine($"Last name: {secondUser.LastName}");
-        Console.WriteLine($"Age: {secondUser.Age}");
+        // Test Patient Class Getters and Setters
+        //      Change the information for the Patient created via default constructor
+        Console.WriteLine("\nTest Patient Getters and Setters, second Patient is now:");
+        secondPatient.FirstName = "Raphael";
+        secondPatient.LastName = "Turtle";
+        secondPatient.Age = 17;
+        Console.WriteLine($"First name: {secondPatient.FirstName}");
+        Console.WriteLine($"Last name: {secondPatient.LastName}");
+        Console.WriteLine($"Age: {secondPatient.Age}");
 
         Console.WriteLine("");
         DisplayUtil.HoldTerminal();

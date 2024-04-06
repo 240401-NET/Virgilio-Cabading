@@ -15,22 +15,22 @@ class Program
 
         // Test appTester = new();
 
-        // // Test the User Class Methods
-        // appTester.TestUserClass();
+        // // Test the Patient Class Methods
+        // appTester.TestPatientClass();
 
         // // Test Vital Sign Class Methods
         // appTester.TestVitalSignClass();
 
         // *** Fields ******
-        List<User> patientList = new List<User>();
+        PatientController patientControl = new PatientController();
 
         // Create implicit patients for development
-        patientList.Add(new User("John", "Doe", 46));
-        patientList.Add(new User("Juan", "Manuel", 23));
-        patientList.Add(new User("Maria Clara", "Elizabeth", 21));
+        // patientControl.AddPatient(new Patient("John", "Doe", 46));
+        // patientControl.AddPatient(new Patient("Juan", "Manuel", 23));
+        // patientControl.AddPatient(new Patient("Maria Clara", "Elizabeth", 21));
 
         // Execute the Main Menu
         MainMenu mainMenu = new();
-        patientList = mainMenu.Execute(patientList);
+        mainMenu.Execute(patientControl);
     }
 }

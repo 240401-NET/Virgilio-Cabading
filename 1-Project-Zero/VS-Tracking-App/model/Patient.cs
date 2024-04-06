@@ -3,11 +3,11 @@ using System.Collections.Specialized;
 namespace VS_Tracking_App;
 
 /// <summary>
-///     User Class: 
-///     Encapsulates the user's biodata</para>
+///     Patient Class: 
+///     Encapsulates the patient's biodata</para>
 /// </summary>
 
-public class User
+public class Patient
 {
     // *** Fields ******
 
@@ -39,7 +39,7 @@ public class User
     /// <summary>
     /// Default Constructor
     /// </summary>
-    public User()
+    public Patient ()
     {
         _firstName = "unknown";
         _lastName = "unknown";
@@ -52,7 +52,7 @@ public class User
     /// <param name="newFirstName">The User's First Name in string format</param>
     /// <param name="newLastName">The User's Last Name in string format</param>
     /// <param name="newAge">The User's Age in integer format</param>
-    public User( string newFirstName, string newLastName, int newAge)
+    public Patient( string newFirstName, string newLastName, int newAge)
     {
         _firstName = newFirstName;
         _lastName = newLastName;
@@ -62,12 +62,12 @@ public class User
     // *** Methods ******
 
     /// <summary>
-    /// Converts User class into a printble format
+    /// Converts Patient class into a printble format
     /// </summary>
-    /// <returns>string format of user class</returns>
+    /// <returns>string format of Patient class</returns>
     public override string ToString()
     {
-        return  $".::: User :: First Name: {_firstName}" +
+        return  $".::: Patient :: First Name: {_firstName}" +
                 $" | Last Name: {_lastName}" +
                 $" | Age: {_age} :::.";
     }

@@ -45,10 +45,10 @@ class MainMenu
     /// <summary>
     ///     Runs the Main Menu of the Application
     /// </summary>
-    /// <param name="userList">List of Existing Patients</param>
-    public List<User> Execute(List<User> patientList)
+    /// <param name="patientList">List of Exispatient Patients</param>
+    public void Execute(PatientController patientControl)
     {
-        // Keep the Main Mehnu running until the user selects to quit the main menu
+        // Keep the Main Mehnu running until the user selects to quit 
         while (_menuSelection != 9)
         {
             DisplayUtil.DisplayProgramHeader();
@@ -63,16 +63,16 @@ class MainMenu
             // Execute selected action
             if (_menuSelection == 1)
             {
+                // View for Adding Patient
                 AddPatientView addPatientViewer = new();
-                patientList = addPatientViewer.Execute(patientList);
+                addPatientViewer.Execute(patientControl);
             }
             else if (_menuSelection == 8)
             {
-                ViewAllPatientsView viewAllPatientViewer = new();
-                viewAllPatientViewer.Execute(patientList);
+                // View of All the patients
+                ViewAllPatientsView viewAllPatientsViewer = new();
+                viewAllPatientsViewer.Execute(patientControl);
             }
-
         }
-        return patientList;
     }
 }

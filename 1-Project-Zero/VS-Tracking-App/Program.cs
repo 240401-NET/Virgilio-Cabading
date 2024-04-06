@@ -9,11 +9,9 @@ class Program
     // *** Main Application ******
     static void Main(string[] args)
     {
-        List<User> patientList = new List<User>();
-
-        DisplayUtil.DisplayProgramHeader();
-
         // *** TEST AREA ******
+        
+        // DisplayUtil.DisplayProgramHeader();
 
         // Test appTester = new();
 
@@ -23,8 +21,11 @@ class Program
         // // Test Vital Sign Class Methods
         // appTester.TestVitalSignClass();
 
+        // *** Fields ******
+        List<User> patientList = new List<User>();
+
         // Execute the Main Menu
         MainMenu mainMenu = new();
-        mainMenu.Execute(patientList);
+        patientList = mainMenu.Execute(patientList);
     }
 }

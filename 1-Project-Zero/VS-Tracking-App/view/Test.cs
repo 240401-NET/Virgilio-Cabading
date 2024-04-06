@@ -4,6 +4,7 @@ namespace VS_Tracking_App;
 ///     Test Class:
 ///         tests classes and methods used in Vital Sign Tracking Project
 /// </summary>
+/// <remarks>Deprecated due to implementation of xUnit tests</remarks>
 
 class Test
 {

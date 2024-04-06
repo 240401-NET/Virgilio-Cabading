@@ -20,7 +20,7 @@ class MainMenu
         Console.WriteLine("(1) - Add New Patient");
 
         Console.WriteLine("(8) - View List of Existing Patients");
-        Console.WriteLine("(9) - Quit");
+        Console.WriteLine("(9) - Quit\n");
         Console.WriteLine("------------------------------------------\n");
     }
 
@@ -36,7 +36,7 @@ class MainMenu
         }
         catch (Exception e)
         {
-            Console.WriteLine($"{ e.Message }\nEntry was invalid. Please try again.\n");
+            Console.WriteLine($"{e.Message}\nEntry was invalid. Please try again.\n");
             DisplayUtil.HoldTerminal();
             return 0;
         }
@@ -46,10 +46,10 @@ class MainMenu
     ///     Runs the Main Menu of the Application
     /// </summary>
     /// <param name="userList">List of Existing Patients</param>
-    public void Execute(List<User> patientList)
+    public List<User> Execute(List<User> patientList)
     {
         // Keep the Main Mehnu running until the user selects to quit the main menu
-        while ( _menuSelection != 9)
+        while (_menuSelection != 9)
         {
             DisplayUtil.DisplayProgramHeader();
 
@@ -63,18 +63,16 @@ class MainMenu
             // Execute selected action
             if (_menuSelection == 1)
             {
-                Console.WriteLine("------------------------------------------");
-                Console.WriteLine("  Add New Patient:");
-                Console.WriteLine("------------------------------------------\n");
-                DisplayUtil.HoldTerminal();
+                AddPatientView addPatientViewer = new();
+                patientList = addPatientViewer.Execute(patientList);
             }
             else if (_menuSelection == 8)
             {
-                Console.WriteLine("------------------------------------------");
-                Console.WriteLine("  Display All Patients:");
-                Console.WriteLine("------------------------------------------\n");
-                DisplayUtil.HoldTerminal();
+                ViewAllPatientsView viewAllPatientViewer = new();
+                viewAllPatientViewer.Execute(patientList);
             }
+
         }
+        return patientList;
     }
 }

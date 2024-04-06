@@ -24,6 +24,11 @@ class Program
         // *** Fields ******
         List<User> patientList = new List<User>();
 
+        // Create implicit patients for development
+        patientList.Add(new User("John", "Doe", 46));
+        patientList.Add(new User("Juan", "Manuel", 23));
+        patientList.Add(new User("Maria Clara", "Elizabeth", 21));
+
         // Execute the Main Menu
         MainMenu mainMenu = new();
         patientList = mainMenu.Execute(patientList);

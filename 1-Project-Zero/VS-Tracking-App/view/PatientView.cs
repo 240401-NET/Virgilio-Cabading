@@ -65,8 +65,7 @@ class PatientView
                     break;
                 // View all of patient's Vital Signs
                 case 2:
-                    DisplayUtil.OutputMessage("View All of Patient's Vital Signs View:");
-                    DisplayUtil.HoldTerminal();
+                    new PatientVitalSignsView().Execute(patient);
                     break;
                 // Delete patient
                 case 8:

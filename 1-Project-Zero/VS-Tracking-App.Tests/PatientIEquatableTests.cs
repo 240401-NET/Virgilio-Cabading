@@ -61,7 +61,7 @@ public class PatientIEquatableTests
     [InlineData("FIRST", "LAST", "first", "last")]
     [InlineData("John", "Doe", "jOHN", "dOE")]
     [InlineData("MARY", "jane", "mary", "JANE")]
-    public void Patient_WqualsOperator_ReturnsTrueIfBothFirstAndLastNamesInLowerCaseAreEqual
+    public void Patient_EqualsOperator_ReturnsTrueIfBothFirstAndLastNamesInLowerCaseAreEqual
     (
         string p1FirstName, string p1LastName,
         string p2FirstName, string p2LastName
@@ -87,7 +87,7 @@ public class PatientIEquatableTests
     [InlineData("FIRST", "LAST", "Dex", "last")]
     [InlineData("John", "Doe", "jOHN", "DEER")]
     [InlineData("MARY", "jane", "mary", "JAin")]
-    public void Patient_Equals_ReturnsFalseIfTheFirstNameAndLastNamesOfTwoPatientsAreNotTheSame
+    public void Patient_EqualsOperator_ReturnsFalseIfTheFirstNameAndLastNamesOfTwoPatientsAreNotTheSame
     (
         string p1FirstName, string p1LastName,
         string p2FirstName, string p2LastName
@@ -98,7 +98,7 @@ public class PatientIEquatableTests
         Patient patient2 = new Patient(p2FirstName, p2LastName, 2);
 
         // Act
-        bool result = patient1 == patient2] 1;
+        bool result = patient1 == patient2;
 
         // Assert
         Assert.False(result);

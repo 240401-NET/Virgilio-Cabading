@@ -71,9 +71,8 @@ class PatientView
                     break;
                 // Delete patient
                 case 8:
-                    DisplayUtil.OutputMessage("Delete Patient:");
-                    DisplayUtil.HoldTerminal();
-                    break;
+                    new DeletePatientView().Execute(patient, patientContol);
+                    return;
                 // Catch all other cases
                 default:
                     DisplayUtil.OutputMessage("Error: Invalid Menu Selection");

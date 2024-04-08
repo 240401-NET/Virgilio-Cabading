@@ -91,4 +91,9 @@ class PatientController
         _patientList = new List<Patient>();
         return true;
     }
+
+    public bool DeletePatient(Patient targetPatient)
+    {
+        return _patientList.Remove(targetPatient);
+    }
 }

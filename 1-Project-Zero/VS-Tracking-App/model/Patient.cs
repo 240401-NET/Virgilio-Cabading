@@ -71,15 +71,45 @@ public class Patient : IEquatable<Patient>
         return false;
     }
 
+    public bool IsValidFirstName()
+    {
+        // First name must be at least two letters in length
+        if (_firstName.Length >= 2)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsValidLastName()
+    {
+        // Last name must be at least two letters in length
+        if (_lastName.Length >= 2)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsValidAge()
+    {
+        // Patient must be at least positive years of age
+        if (_age >= 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
     /// <summary>
     /// Converts Patient class into a printble format
     /// </summary>
     /// <returns>string format of Patient class</returns>
     public override string ToString()
     {
-        return $".::: Patient :: First Name: {_firstName}" +
+        return $"  Patient :: First Name: {_firstName}" +
                 $" | Last Name: {_lastName}" +
-                $" | Age: {_age} :::.";
+                $" | Age: {_age}";
     }
 
     // *** IEquatable Overriden Methods ******

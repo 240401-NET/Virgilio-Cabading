@@ -89,11 +89,18 @@ class PatientController
     public bool DeleteAllPatients()
     {
         _patientList = new List<Patient>();
+        DataPersistanceUtil.SavePatients(_patientList); 
         return true;
     }
 
     public bool DeletePatient(Patient targetPatient)
     {
-        return _patientList.Remove(targetPatient);
+        bool patientRemoved = _patientList.Remove(targetPatient);
+        // If deletion was successful, save new list of patients
+        if (patientRemoved)
+        {
+            DataPersistanceUtil.SavePatients(_patientList);
+        }
+        return patientRemoved;
     }
 }

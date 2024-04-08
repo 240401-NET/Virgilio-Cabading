@@ -33,15 +33,17 @@ class PatientController
     ///     Returns instance of patient that was added.\n
     ///     Returns null if no new patient was addeda
     /// </returns>
-    public Patient? AddPatient (Patient? newPatient) {
+    public Patient? AddPatient(Patient? newPatient)
+    {
         // Detect edge case: given a null instead of a new patient
-        if (newPatient == null) {
+        if (newPatient == null)
+        {
             return null;
         }
 
         // Add new patient the the patient list
         _patientList.Add(newPatient);
-        
+
         // Make sure patient list persists past application shut down
         DataPersistanceUtil.SavePatients(_patientList);
 
@@ -59,8 +61,26 @@ class PatientController
         return _patientList;
     }
 
+    /// <summary>
+    ///     Retrieves patient that matches the 
+    ///     first and last names given a parameters
+    /// </summary>
+    /// <param name="targetFirstName"></param>
+    /// <param name="targetLastName"></param>
+    /// <returns>Patient that was found whom matches the given first and last name</returns>
+    public Patient GetPatient(string targetFirstName, string targetLastName)
+    {
+        // Create a target patient
+        Patient targetPatient = new Patient(targetFirstName, targetLastName, 1);
+
+        // Find a patient the Equals the target patient
+        //      if target patient is not found
+        //      a default patient will be returned
+        return _patientList.Find(patient => patient.Equals(targetPatient)) ?? new Patient();
+    }
+
     // *** Update ******
-    // *** Deletes ******
+    // *** Delete ******
 
     /// <summary>
     ///     Deletes all patients

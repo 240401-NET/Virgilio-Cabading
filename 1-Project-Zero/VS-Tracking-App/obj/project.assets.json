@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Virgi\\Documents\\Val\\Coding\\Revature\\240401\\2-VirgilioCabading\\1-Project-Zero\\VS-Tracking-App\\VS-Tracking-App.csproj",
+      "projectUniqueName": "C:\\Users\\Virgi\\Documents\\Val\\Coding\\Revature\\240401\\2-projects\\1-Project-Zero\\VS-Tracking-App\\VS-Tracking-App.csproj",
       "projectName": "VS-Tracking-App",
-      "projectPath": "C:\\Users\\Virgi\\Documents\\Val\\Coding\\Revature\\240401\\2-VirgilioCabading\\1-Project-Zero\\VS-Tracking-App\\VS-Tracking-App.csproj",
+      "projectPath": "C:\\Users\\Virgi\\Documents\\Val\\Coding\\Revature\\240401\\2-projects\\1-Project-Zero\\VS-Tracking-App\\VS-Tracking-App.csproj",
       "packagesPath": "C:\\Users\\Virgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Virgi\\Documents\\Val\\Coding\\Revature\\240401\\2-VirgilioCabading\\1-Project-Zero\\VS-Tracking-App\\obj\\",
+      "outputPath": "C:\\Users\\Virgi\\Documents\\Val\\Coding\\Revature\\240401\\2-projects\\1-Project-Zero\\VS-Tracking-App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Virgi\\AppData\\Roaming\\NuGet\\NuGet.Config"

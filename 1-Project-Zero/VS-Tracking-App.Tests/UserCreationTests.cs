@@ -16,9 +16,9 @@ public class PatientCreationTests
 
         // Assert
         // Test that the create Patient has:
-        // First name: unknown | Last name: unknown | Age: -1
-        Assert.Equal( "unknown", newDefaultPatient.FirstName );
-        Assert.Equal( "unknown", newDefaultPatient.LastName );
+        // First name: "" | Last name: "" | Age: -1
+        Assert.Equal( "", newDefaultPatient.FirstName );
+        Assert.Equal( "", newDefaultPatient.LastName );
         Assert.Equal(-1, newDefaultPatient.Age );
     }
 

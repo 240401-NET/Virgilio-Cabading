@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VS-Tracking-App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05c328f37ef23794512c41aa13d2f72fe5029e59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a5836dddca2aae9df93c7e748cd610c9beece0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("VS-Tracking-App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VS-Tracking-App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

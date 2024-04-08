@@ -7,7 +7,7 @@ namespace VS_Tracking_App;
 class MainMenu
 {
     // *** Fields ******
-    private int _menuSelection = 0;
+    private int _menuSelection = -1;
 
     /// <summary>
     ///     Outputs the Main Menu to the Terminal
@@ -18,9 +18,9 @@ class MainMenu
         Console.WriteLine("  Main Menu:");
         Console.WriteLine("------------------------------------------\n");
         Console.WriteLine("(1) - Add New Patient");
-
-        Console.WriteLine("(8) - View List of Existing Patients");
-        Console.WriteLine("(9) - Quit\n");
+        Console.WriteLine("(2) - View List of Existing Patients");
+        Console.WriteLine("(3) - Find a Patient");
+        Console.WriteLine("(0) - Quit\n");
         Console.WriteLine("------------------------------------------\n");
     }
 
@@ -38,7 +38,7 @@ class MainMenu
         {
             Console.WriteLine($"{e.Message}\nEntry was invalid. Please try again.\n");
             DisplayUtil.HoldTerminal();
-            return 0;
+            return -1;
         }
     }
 
@@ -49,7 +49,7 @@ class MainMenu
     public void Execute(PatientController patientControl)
     {
         // Keep the Main Mehnu running until the user selects to quit 
-        while (_menuSelection != 9)
+        while (_menuSelection != 0)
         {
             DisplayUtil.DisplayProgramHeader();
 
@@ -61,17 +61,25 @@ class MainMenu
             _menuSelection = this.RetrieveMenuSelection();
 
             // Execute selected action
-            if (_menuSelection == 1)
+            switch (_menuSelection)
             {
                 // View for Adding Patient
-                AddPatientView addPatientViewer = new();
-                addPatientViewer.Execute(patientControl);
-            }
-            else if (_menuSelection == 8)
-            {
+                case 1:
+                    AddPatientView addPatientViewer = new();
+                    addPatientViewer.Execute(patientControl);
+                    break;
                 // View of All the patients
-                ViewAllPatientsView viewAllPatientsViewer = new();
-                viewAllPatientsViewer.Execute(patientControl);
+                case 2:
+                    ViewAllPatientsView viewAllPatientsViewer = new();
+                    viewAllPatientsViewer.Execute(patientControl);
+                    break;
+                case 3:
+                    FindPatientView findPatientViewer = new();
+                    findPatientViewer.Execute(patientControl);
+                    break;
+                case 0:
+                    DisplayUtil.OutputMessage("Good bye");
+                    break;
             }
         }
     }

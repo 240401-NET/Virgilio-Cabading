@@ -1,3 +1,4 @@
+using System.Data;
 using System.Diagnostics;
 
 namespace VS_Tracking_App;
@@ -35,8 +36,22 @@ class DisplayUtil
     /// </summary>
     public static void HoldTerminal()
     {
-        Console.WriteLine("------------------------------------------");
+        Console.WriteLine("\n------------------------------------------");
         Console.Write("Press ENTER to proceed: ");
         Console.ReadLine();
+    }
+
+    public static void OutputMessage(string message)
+    {
+        Console.WriteLine("\n-----------------------------------------------");
+        Console.WriteLine(message);
+        Console.WriteLine("-----------------------------------------------\n");
+    }
+    
+    public static void WindowHeader(string message)
+    {
+        Console.WriteLine("\n------------------------------------------");
+        Console.WriteLine($"  {message}:");
+        Console.WriteLine("------------------------------------------\n");
     }
 }

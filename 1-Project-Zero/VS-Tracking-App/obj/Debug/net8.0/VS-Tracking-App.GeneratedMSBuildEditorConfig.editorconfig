@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VS_Tracking_App
-build_property.ProjectDir = C:\Users\Virgi\Documents\Val\Coding\Revature\240401\2-VirgilioCabading\1-Project-Zero\VS-Tracking-App\
+build_property.ProjectDir = C:\Users\Virgi\Documents\Val\Coding\Revature\240401\2-projects\1-Project-Zero\VS-Tracking-App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

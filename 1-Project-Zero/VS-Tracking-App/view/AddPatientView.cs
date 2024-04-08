@@ -10,12 +10,9 @@ class AddPatientView
         // Instance of a New Patient
         Patient? newPatient = new Patient();
 
-
         // Output header
         DisplayUtil.DisplayProgramHeader();
-        Console.WriteLine("------------------------------------------");
-        Console.WriteLine("  Add New Patient:");
-        Console.WriteLine("------------------------------------------\n");
+        DisplayUtil.WindowHeader("Add New Patient");
 
         // Rewtrieve Patient informatin from the terminal
         Console.WriteLine("Enter new patient's information:\n");

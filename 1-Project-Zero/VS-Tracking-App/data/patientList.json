@@ -1,1 +1,1 @@
-[{"FirstName":"John","LastName":"Doe","Age":46},{"FirstName":"Juan","LastName":"Manuel","Age":23},{"FirstName":"Maria Clara","LastName":"Elizabeth","Age":21},{"FirstName":"Harry","LastName":"Potter","Age":7}]
+[{"FirstName":"Juan","LastName":"Manuel","Age":23,"VitalSignList":[]},{"FirstName":"Maria Clara","LastName":"Elizabeth","Age":21,"VitalSignList":[]},{"FirstName":"Harry","LastName":"Potter","Age":7,"VitalSignList":[]},{"FirstName":"john","LastName":"doe","Age":45,"VitalSignList":[{"HeartRate":54,"SystolicBP":90,"DiastolicBP":60}]}]

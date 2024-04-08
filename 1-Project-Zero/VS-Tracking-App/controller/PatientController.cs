@@ -50,6 +50,26 @@ class PatientController
         return newPatient;
     }
 
+    /// <summary>
+    ///     Adds a new vital sign to the patient
+    /// </summary>
+    /// <param name="patient">Instance of patient</param>
+    /// <param name="newSystolicBP"></param>
+    /// <param name="newDiastolicBP"></param>
+    /// <param name="newHeartRate"></param>
+    /// <returns>Instance of patient with newly added vital sign</returns>
+    public Patient AddVitalSign(Patient patient, int newSystolicBP, int newDiastolicBP, int newHeartRate)
+    {
+        List<VitalSign> localVitalSignList = patient.VitalSignList;
+        localVitalSignList.Add(new VitalSign(newSystolicBP, newDiastolicBP, newHeartRate));
+        patient.VitalSignList = localVitalSignList;
+
+        // Save new vital sign to database
+        DataPersistanceUtil.SavePatients(_patientList);
+
+        return patient;
+    }
+
     // *** Retrieve ******
 
     /// <summary>
@@ -80,6 +100,7 @@ class PatientController
     }
 
     // *** Update ******
+    
     // *** Delete ******
 
     /// <summary>

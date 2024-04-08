@@ -15,6 +15,7 @@ public class Patient : IEquatable<Patient>
     private string _firstName;
     private string _lastName;
     private int _age;
+    private List<VitalSign> _vitalSignList;
 
     // *** Getters and Setters ******
     public string FirstName
@@ -35,20 +36,27 @@ public class Patient : IEquatable<Patient>
         set { _age = value; }
     }
 
+    public List<VitalSign> VitalSignList
+    {
+        get { return _vitalSignList; }
+        set { _vitalSignList = value; }
+    }
+
     // *** Constructors ******
 
     /// <summary>
-    /// Default Constructor
+    ///     Default Constructor
     /// </summary>
     public Patient()
     {
         _firstName = "";
         _lastName = "";
         _age = -1;
+        _vitalSignList = new List<VitalSign>();
     }
 
     /// <summary>
-    /// Parameterized Constructor
+    ///     Parameterized Constructor
     /// </summary>
     /// <param name="newFirstName">The User's First Name in string format</param>
     /// <param name="newLastName">The User's Last Name in string format</param>
@@ -58,10 +66,16 @@ public class Patient : IEquatable<Patient>
         _firstName = newFirstName;
         _lastName = newLastName;
         _age = newAge;
+        _vitalSignList = new List<VitalSign>();
     }
 
     // *** Methods ******
 
+    /// <summary>
+    ///     Tests if the Patient's information are set 
+    ///     to the information provided by the default constructor
+    /// </summary>
+    /// <returns>boolean</returns>
     public bool IsDefault()
     {
         if (this.FirstName == "" && this.LastName == "")
@@ -71,6 +85,11 @@ public class Patient : IEquatable<Patient>
         return false;
     }
 
+    /// <summary>
+    ///     Test if the First Name of the Patient is at least 
+    ///     two characters in length
+    /// </summary>
+    /// <returns></returns>
     public bool IsValidFirstName()
     {
         // First name must be at least two letters in length
@@ -81,6 +100,11 @@ public class Patient : IEquatable<Patient>
         return false;
     }
 
+    /// <summary>
+    ///     Tests if the last nameof the patient is at least 
+    ///     two characters in length
+    /// </summary>
+    /// <returns>boolean</returns>
     public bool IsValidLastName()
     {
         // Last name must be at least two letters in length
@@ -91,6 +115,11 @@ public class Patient : IEquatable<Patient>
         return false;
     }
 
+    /// <summary>
+    ///     Tests if the age of the patient is at least
+    ///     a non-negative integer
+    /// </summary>
+    /// <returns></returns>
     public bool IsValidAge()
     {
         // Patient must be at least positive years of age
@@ -102,14 +131,17 @@ public class Patient : IEquatable<Patient>
     }
 
     /// <summary>
-    /// Converts Patient class into a printble format
+    ///     Converts Patient class into a printble format
     /// </summary>
     /// <returns>string format of Patient class</returns>
     public override string ToString()
     {
-        return $"  Patient :: First Name: {_firstName}" +
-                $" | Last Name: {_lastName}" +
-                $" | Age: {_age}";
+        string output = "";
+        output +=   $"  Patient :: First Name: {_firstName}" +
+                    $" | Last Name: {_lastName}" +
+                    $" | Age: {_age}" +
+                    $" | Number of Vital Signs: {_vitalSignList.Count}";
+        return output;
     }
 
     // *** IEquatable Overriden Methods ******

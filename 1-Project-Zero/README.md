@@ -1,6 +1,6 @@
 # Project Zero READ ME
 
-## Vital Signs Tracking Applicatioon
+## Vital Signs Tracking Application
 
 ## Author
 

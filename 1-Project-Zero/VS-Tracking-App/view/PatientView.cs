@@ -61,8 +61,7 @@ class PatientView
                     break;
                 case 1:
                     // Add Vital Signs
-                    DisplayUtil.OutputMessage("Add Vital Signs View:");
-                    DisplayUtil.HoldTerminal();
+                    new AddVitalSignView().Execute(patient, patientContol); 
                     break;
                 // View all of patient's Vital Signs
                 case 2:

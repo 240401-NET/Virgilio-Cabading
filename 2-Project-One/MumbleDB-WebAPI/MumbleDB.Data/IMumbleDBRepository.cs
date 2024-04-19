@@ -14,4 +14,10 @@ public interface IMumbleDBRepository
     // *** Retrieve ******
 
     IEnumerable<User> GetAllUsers();
+    User GetUserById(int id);
+
+    // *** Update ******
+    // *** Delete ******
+
+    public User DeleteUser(User userToDelete);
 }

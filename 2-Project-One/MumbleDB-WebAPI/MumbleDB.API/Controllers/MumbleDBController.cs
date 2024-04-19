@@ -30,28 +30,67 @@ public class MumbleDBController : ControllerBase
 
     // *** Create ******
 
+    [HttpPost("Users")]
+    public ActionResult<User> Post(User newUser)
+    {
+        try
+        {
+            return _mService.AddNewUser(newUser);
+        }
+        catch (Exception ex)
+        {
+            return Problem(ex.Message);
+        }
+    }
+
     // *** Retrieve ******
 
     [HttpGet("Users")]
-    public IEnumerable<User> GetUsers()
+    public ActionResult<IEnumerable<User>> GetUsers()
     {
-        //     try
-        //     {
-        //         var users = _mService.GetAllUsers();
-        //         return Ok(users);
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         return Problem(ex.Message);
-        //     }
+        try
+        {
+            return Ok(_mService.GetAllUsers());
+        }
+        catch (Exception ex)
+        {
+            return Problem(ex.Message);
+        }
+    }
 
-        // return _mService.GetAllUsers();
-        return _mService.GetAllUsers();
+    [HttpGet("Users/{targetId}")]
+    public ActionResult<User> GetUserById(int targetId)
+    {
+        try
+        {
+            User foundUser = _mService.GetUserById(targetId);
+            return Ok(foundUser);
+        }
+        catch (Exception ex)
+        {
+            return Problem(ex.Message);
+        }
     }
 
 
     // *** Update ******
 
     // *** Delete ******
+
+    [HttpDelete("Users/{targetId}")]
+    public ActionResult<User> DeleteUserById(int targetId)
+    {
+        try
+        {
+            // User deletedUser = new();
+            // deletedUser.UserId = targetId;
+            // return deletedUser;
+            return _mService.DeleteUserById(targetId);
+        }
+        catch (Exception ex)
+        {
+            return Problem(ex.Message);
+        }
+    }
 
 }

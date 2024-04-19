@@ -17,7 +17,6 @@ public class MumbleDBRepository : IMumbleDBRepository
     {
         _mDbContext.Users.Add(newUser);
         _mDbContext.SaveChanges();
-
         return newUser;
     }
 
@@ -26,5 +25,20 @@ public class MumbleDBRepository : IMumbleDBRepository
     public IEnumerable<User> GetAllUsers()
     {
         return _mDbContext.Users.ToList();
+    }
+
+    public User GetUserById(int id)
+    {
+        return _mDbContext.Users.Find(id);
+    }
+
+    // *** Update ******
+    // *** Delete ******
+
+    public User DeleteUser(User userToDelete)
+    {
+        _mDbContext.Users.Remove(userToDelete);
+        _mDbContext.SaveChanges();
+        return userToDelete;
     }
 }

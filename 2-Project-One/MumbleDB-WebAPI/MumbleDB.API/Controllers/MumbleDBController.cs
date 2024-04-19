@@ -12,12 +12,9 @@ namespace MumbleDB.Controllers;
 public class MumbleDBController : ControllerBase
 {
     private readonly IMumbleDBService _mService;
-    private readonly IMumbleDBRepository _mRepo;
 
-    public MumbleDBController(IMumbleDBRepository newMRepo, IMumbleDBService service)
+    public MumbleDBController(IMumbleDBService service)
     {
-        // _mService = newMService;
-        _mRepo = newMRepo;
         _mService = service;
     }
 

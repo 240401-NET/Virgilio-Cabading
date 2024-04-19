@@ -15,6 +15,7 @@ public interface IMumbleDBRepository
 
     IEnumerable<User> GetAllUsers();
     User GetUserById(int id);
+    User GetUserByName(string name);
 
     // *** Update ******
     // *** Delete ******

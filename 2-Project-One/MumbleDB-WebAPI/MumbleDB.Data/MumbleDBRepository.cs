@@ -32,6 +32,13 @@ public class MumbleDBRepository : IMumbleDBRepository
         return _mDbContext.Users.Find(id);
     }
 
+    public User GetUserByName(string name)
+    {
+        return _mDbContext.Users
+                    .Where(u => u.Name == name)
+                    .FirstOrDefault();
+    }
+
     // *** Update ******
     // *** Delete ******
 

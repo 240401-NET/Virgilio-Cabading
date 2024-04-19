@@ -16,6 +16,15 @@ public class MumbleDBService : IMumbleDBService
     public User AddNewUser(User newUser)
     {
         newUser.Name = newUser.Name.ToLower();
+        
+        // Test if username already exists
+        User foundUser = _mRepo.GetUserByName(newUser.Name);
+
+        // If username already exists, cannot create new user
+        if (foundUser != null)
+        {
+            throw new Exception("Cannot Create User, User Name already exists");
+        }
         return _mRepo.AddNewUser(newUser);
     }
 

@@ -13,7 +13,7 @@ public class MumbleDBRepository : IMumbleDBRepository
 
     // *** Create ******
 
-    public User AddNewUser(User newUser)
++65    public User AddNewUser(User newUser)
     {
         _mDbContext.Users.Add(newUser);
         _mDbContext.SaveChanges();
